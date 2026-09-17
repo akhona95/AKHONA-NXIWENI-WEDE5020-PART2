@@ -1,22 +1,60 @@
 :root {
     /* Main Palette */
-    --primary: #0d9488;         /* Clinical Teal - Calming primary actions */
-    --primary-dark: #115e59;    /* Deep Forest Teal - Rich headers & buttons */
-    --accent: #06b6d4;          /* Bright Cyan - Hover highlights & badges */
+    --primary: #0d9488;         /* Clinical Teal */
+    --primary-dark: #115e59;    /* Deep Forest Teal */
+    --accent: #06b6d4;          /* Bright Cyan */
+    
+    /* Native System Typography (No External Links Needed) */
+    --font-heading: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     
     /* Backgrounds & Cards */
-    --background: #f0fdf4;      /* Soft Mint/Seafoam Wash */
-    --surface: #ffffff;         /* Pure White Cards */
+    --background: #f0fdf4;
+    --surface: #ffffff;
     
-    /* Typography */
-    --text: #0f172a;            /* Deep Slate Black */
-    --text-muted: #475569;      /* Medium Slate */
+    /* Typography Colors */
+    --text: #0f172a;
+    --text-muted: #475569;
     
-    /* Structure */
-    --border: #ccfbf1;          /* Subtle Mint Border */
+    /* Structure & Radii */
+    --border: #ccfbf1;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    
+    /* Shadows */
     --shadow-sm: 0 1px 3px rgba(13, 148, 136, 0.05);
     --shadow-md: 0 4px 12px rgba(13, 148, 136, 0.08);
     --shadow-lg: 0 10px 25px rgba(13, 148, 136, 0.12);
+}
+
+/* Base Body Typography */
+body {
+    font-family: var(--font-body);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Headings Fine-Tuning */
+h1, h2, h3, h4, h5, h6, 
+.header-brand h1, 
+.eyebrow {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em; /* Tightens characters for a high-end editorial feel */
+}
+
+.header-brand h1 {
+    font-weight: 800;
+}
+
+.navbar a, 
+.btn-primary, 
+.btn-secondary, 
+.btn-submit {
+    font-family: var(--font-body);
+    letter-spacing: 0.01em;
 }
 
 /* ==========================================================================
