@@ -37,10 +37,11 @@
 }
 
 .logo-img {
-    width: 80px;
-    height: 80px;
+    width: auto;
+    height: 60px; /* Scaled up for better readability */
     object-fit: contain;
     display: block;
+    filter: brightness(0) invert(1); /* Converts dark blue elements to pure white */
 }
 
 .navbar ul {
@@ -732,4 +733,46 @@
 
 .btn-primary:hover {
     background-color: var(--background);
+}
+/* Styling for the centered header text */
+.header-brand {
+    text-align: center;
+    color: #ffffff;
+}
+
+.header-brand h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+.header-tagline {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--border); /* Soft light green tint from your palette */
+    margin-top: 2px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Ensure equal distribution across the header */
+.site-header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: var(--shadow-lg);
+}
+@media (max-width: 900px) {
+    .header-brand h1 {
+        font-size: 1.4rem;
+    }
+    
+    .header-tagline {
+        display: none; /* Hides tagline on smaller screens to save vertical space */
+    }
 }
